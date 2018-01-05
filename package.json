@@ -1,5 +1,5 @@
 {
-  "name": "rnw-ssr",
+  "name": "react-native-web-ssr-boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -56,6 +56,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "server": "node ./main.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {

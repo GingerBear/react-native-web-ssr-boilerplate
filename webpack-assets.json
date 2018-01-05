@@ -1,10 +1,10 @@
 {
   "javascript": {
-    "main": "/static/js/main.e308e12a.js"
+    "main": "/static/js/main.79fe8710.js"
   },
   "styles": {},
   "assets": {
-    "./src/img.png": "/static/media/img.67fd3eb2.png"
+    "./src/img.png": "/static/media/img.27b66dcd.png"
   },
   "webpack": {
     "version": "3.8.1"
