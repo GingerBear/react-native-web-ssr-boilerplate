@@ -2,6 +2,9 @@ import App from './src/App';
 import ReactDOMServer from 'react-dom/server';
 import { AppRegistry } from 'react-native';
 
+const fs = require('fs');
+const indexHTML = fs.readFileSync('./build/index.html');
+
 // register the app
 AppRegistry.registerComponent('App', () => App);
 
@@ -14,16 +17,12 @@ const initialStyles = stylesheets
 
 function serve(req, res, next) {
   // construct HTML document string
-  const document = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-    ${initialStyles}
-    </head>
-    <body>
-    ${initialHTML}
-    `;
-
+  const document = indexHTML
+    .toString()
+    .replace(
+      '<div id="root">',
+      '<div id="root">' + initialStyles + initialHTML
+    );
   res.send(document);
 }
 

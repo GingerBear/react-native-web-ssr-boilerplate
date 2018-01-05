@@ -1,0 +1,12 @@
+{
+  "javascript": {
+    "main": "/static/js/main.e308e12a.js"
+  },
+  "styles": {},
+  "assets": {
+    "./src/img.png": "/static/media/img.67fd3eb2.png"
+  },
+  "webpack": {
+    "version": "3.8.1"
+  }
+}
