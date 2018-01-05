@@ -10,7 +10,7 @@
     "babel-loader": "7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-extension-resolver":
-      "file:/Users/guanxiongding/Projects/babel-plugin-extension-resolver",
+      "https://github.com/GingerBear/babel-plugin-extension-resolver",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-react-app": "^3.1.0",
     "babel-runtime": "6.26.0",

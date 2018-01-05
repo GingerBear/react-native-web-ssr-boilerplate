@@ -521,13 +521,9 @@ babel-plugin-dynamic-import-node@1.1.0:
     babel-template "^6.26.0"
     babel-types "^6.26.0"
 
-"babel-plugin-extension-resolver@file:../babel-plugin-extension-resolver":
+"babel-plugin-extension-resolver@https://github.com/GingerBear/babel-plugin-extension-resolver":
   version "0.0.1"
-  dependencies:
-    resolve "^1.4.0"
-
-"babel-plugin-extension-resolver@file:/Users/guanxiongding/Projects/babel-plugin-extension-resolver":
-  version "0.0.1"
+  resolved "https://github.com/GingerBear/babel-plugin-extension-resolver#03616d48fe9542a3e92bbb25c17c4f0437fe10cd"
   dependencies:
     resolve "^1.4.0"
 
