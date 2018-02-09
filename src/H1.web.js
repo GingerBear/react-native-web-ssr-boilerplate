@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 
 class H1 extends Component {
   render() {
-    return <Text>H1 on web</Text>;
+    return <Text>H1 on web: {this.props.name}</Text>;
   }
 }
 

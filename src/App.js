@@ -6,11 +6,17 @@ import Art from './Art';
 const img = require('./img.png');
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = (typeof window !== 'undefined' && window.INITIAL_PROPS) || {
+      name: props.name
+    };
+  }
   render() {
     return (
       <View style={styles.box}>
         <Text style={styles.text}>Hello, world!</Text>
-        <H1 />
+        <H1 name={this.state.name} />
         <Button title="Press Me" color="red" onPress={() => alert('aha')} />
         <Image
           source={img}
