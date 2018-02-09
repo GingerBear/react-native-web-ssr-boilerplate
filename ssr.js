@@ -9,20 +9,15 @@ const indexHTML = fs.readFileSync('./build/index.html');
 AppRegistry.registerComponent('App', () => App);
 
 // prerender the app
-const { element, stylesheets } = AppRegistry.getApplication('App', {});
-const initialHTML = ReactDOMServer.renderToString(element);
-const initialStyles = stylesheets
-  .map(sheet => ReactDOMServer.renderToStaticMarkup(sheet))
-  .join('\n');
+const { element, getStyleElement } = AppRegistry.getApplication('App', {});
+const html = ReactDOMServer.renderToString(element);
+const css = ReactDOMServer.renderToStaticMarkup(getStyleElement());
 
 function serve(req, res, next) {
   // construct HTML document string
   const document = indexHTML
     .toString()
-    .replace(
-      '<div id="root">',
-      '<div id="root">' + initialStyles + initialHTML
-    );
+    .replace('<div id="root">', '<div id="root">' + css + html);
   res.send(document);
 }
 

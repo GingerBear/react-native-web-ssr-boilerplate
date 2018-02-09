@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import H1 from './H1';
+import Art from './Art';
 
 const img = require('./img.png');
 
@@ -16,6 +17,7 @@ class App extends Component {
           defaultSource={img}
           style={{ width: 100, height: 100 }}
         />
+        <Art />
       </View>
     );
   }

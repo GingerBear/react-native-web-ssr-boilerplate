@@ -39,7 +39,7 @@
     "react": "^16.2.0",
     "react-dev-utils": "^4.2.1",
     "react-dom": "^16.2.0",
-    "react-native-web": "^0.3.0-rc.4",
+    "react-native-web": "^0.4.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
@@ -50,13 +50,15 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "babel-plugin-react-native-web": "^0.3.0-rc.4",
+    "babel-plugin-react-native-web": "^0.4.0",
     "babel-preset-react-native": "^4.0.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "server": "node ./main.js",
+    "warn-art":
+      "echo '\n------\n To fix [document is not defined], it needs this change: https://github.com/sebmarkbage/art/pull/16\n------'",
+    "server": "npm run warn-art && node ./main.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {

@@ -1,5 +1,7 @@
 process.env.BABEL_ENV = 'development';
-require('babel-register');
+require('babel-register')({
+  cache: false
+});
 
 var WebpackIsomorphicTools = require('webpack-isomorphic-tools');
 
